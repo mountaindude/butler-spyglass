@@ -27,13 +27,13 @@ logger.info(`--------------------------------------`);
 logger.info(``);
 logger.info(`Extracting metadata from server: ${config.get('ButlerSpyglass.configEngine.host')}`);
 if (config.get('ButlerSpyglass.lineageExtract.enable') === true) {
-    logger.info(`Data linage files will be stored in                : ${config.get('ButlerSpyglass.lineageExtract.exportDir')}`);
+    logger.info(`Data linage files will be stored in                 : ${config.get('ButlerSpyglass.lineageExtract.exportDir')}`);
 }
 if (config.get('ButlerSpyglass.scriptExtract.enable')) {
-    logger.info(`Load script files will be stored in                : ${config.get('ButlerSpyglass.scriptExtract.exportDir')}`);
+    logger.info(`Load script files will be stored in                 : ${config.get('ButlerSpyglass.scriptExtract.exportDir')}`);
 }
 if (config.get('ButlerSpyglass.dataConnectionExtract.enable')) {
-    logger.info(`Data connection definitions files will be stored in: ${config.get('ButlerSpyglass.dataConnectionExtract.exportDir')}`);
+    logger.info(`Data connection definitions files will be stored in : ${config.get('ButlerSpyglass.dataConnectionExtract.exportDir')}`);
 }
 logger.verbose(``);
 logger.verbose(`Butler Spyglass was started from ${execPath}`);
@@ -50,7 +50,7 @@ logger.debug(`Engine CA cert: ${config.get('ButlerSpyglass.cert.clientCertCA')}`
 // Set up task queue
 const q = new Queue(
     async function dumpApp(taskItem, cb) {
-        logger.debug(`Dumping app: ${taskItem.qDocId} <<>> ${taskItem.qTitle}`);
+        logger.debug(`Dumping app: ${taskItem.id} <<>> ${taskItem.name}`);
 
         // eslint-disable-next-line no-underscore-dangle
         const _self = this;

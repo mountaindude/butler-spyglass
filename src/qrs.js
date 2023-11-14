@@ -50,7 +50,7 @@ const setupQRSConnection = (logger, config, param) => {
             'X-Qlik-User': 'UserDirectory=Internal; UserId=sa_api',
             // 'Content-Type': 'application/json; charset=utf-8',
         },
-        responseType: 'application/json',
+        // responseType: 'application/json',
         httpsAgent,
         timeout: 60000,
         //   passphrase: "YYY"
